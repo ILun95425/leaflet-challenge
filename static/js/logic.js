@@ -26,6 +26,8 @@ let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     else if(depth > 10) {return "#91ed8e"}
     else  {return "#68f263"}
     }
+
+    
  L.geoJSON(earthquake, {
     pointToLayer: function(feature, coords){
         let mag = feature.properties.mag;
@@ -61,7 +63,7 @@ legend.onAdd = function(map) {
     div.style.backgroundColor="#FFFFFF"
     div.style.padding="10px"
     div.innerHTML += '<h4>Depth</h4>';
-    
+
 // loop 
     for (let i = 0; i < colors.length; i++) {
         div.innerHTML +=
