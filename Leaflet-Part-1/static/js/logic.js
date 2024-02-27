@@ -22,7 +22,7 @@ let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     if(depth > 90) { return "#ff0000"  }
     else if(depth > 70) { return "#f27844" }
     else if(depth > 50) {return "#f2e874"}
-    else if(depth > 30) {return "#6ded64"} //colour error
+    else if(depth > 30) {return "#6ded64"} //colour
     else if(depth > 10) {return "#91ed8e"}
     else  {return "#68f263"}
     }
@@ -59,7 +59,7 @@ let legend = L.control({ position: 'bottomright' });
 legend.onAdd = function(map) {
     let div = L.DomUtil.create('div', 'info legend');
     let grades = [-10, 10, 30, 50, 70, 90];
-    let colors = ["#006400", "#66FF33", "#CCFF66", "#FFCC66", "#FF9966", "#FF3300"];
+    let colors = ["#68f263", "#91ed8e", "#6ded64", "#f2e874", "#f2e874", "#ff0000"];
     div.style.backgroundColor="#FFFFFF"
     div.style.padding="10px"
     div.innerHTML += '<h4>Depth</h4>';
